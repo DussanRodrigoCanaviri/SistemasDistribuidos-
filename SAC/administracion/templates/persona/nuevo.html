@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<h1>Nueva Persona</h1>
+<form action="{% url 'persona_nuevo' %}" method ="POST" name="fPersona" id="fPersona">
+	{% csrf_token %}
+	Nombres: <input type="text" name="nombres" placeholder="Introduzaca los Nombres">
+	Apellidos: <input type="text" name="apellidos">
+	Direccion:<input type="text" name="direccion">
+	Telefono:<input type="text" name="telefono">
+	Cedula de Identidad : <input type="number" name="ci">
+	Correo: <input type="email" name="correo">
+	Fecha de Nacimiento: <input type="date" name="fecha_nacimiento">
+	<input type="submit" value="Guardar">
+	<input type="reset" value="Borrar">
+	<a href="{% url 'persona_index' %}">Cancelar</a>
+
+
+	
+</form>
+</body>
+</html>

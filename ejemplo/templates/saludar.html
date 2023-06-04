@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Saludo</title>
+</head>
+<body>
+	<h2>Damos la bienvenida a nuestro compañero:</h2>
+	<h1>{{ nombres }} que tiene {{ edad }} años </h1>
+	{% if edad < 18 %}
+		<font color="red">Es menor de edad</font>
+	{% else %}
+		<font color="green">Tiene el pase libre</font>
+	{% endif %}
+</body>
+</html>

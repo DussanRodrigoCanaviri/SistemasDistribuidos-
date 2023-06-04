@@ -1,0 +1,29 @@
+codigo para entrar al entorno virtual 
+	env\Scripts\activate
+comando para salir del entorno virtual
+	deactivate
+comando para crear un nuevo proyecto 
+	django-admin startproject [nombre del proyecto]
+comando para hacer correr el proyecto 
+	python manage.py runserver
+comando para crear una app
+	python manage.py startapp [Nombre de la app]
+1-- primero hacer reconocer la app 
+
+comando para migrar los modelos
+	python mnage.py makemigrations
+comando para migrar los modelos de una app en especifico 
+	python mnage.py makemigrations [nombre de la app]
+comando par migrar todo
+	python manage.py migrate
+comando par migrar una app en especifico
+	python manage.py migrate [nombre de la app]
+para crear super usuario
+	python manage.py createsuperuser
+
+migrar la documentacion
+	python manage.py makemigrations administracion
+
+	python manage.py sqlmigrate administracion 0002
+
+	python manage.py migrate

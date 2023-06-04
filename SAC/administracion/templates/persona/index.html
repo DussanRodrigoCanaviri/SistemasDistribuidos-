@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Lista de las personas</title>
+</head>
+<body>
+<h1>Datos de personas</h1>
+<table width="90%" align="center" border="1">
+	<a href="nueva/persona">Nueva Persona</a>
+	<a href="{% url 'persona_nuevo' %}">Nueva Persona</a>
+	<thead>
+		<tr>
+			<th>N°</th>
+			<th>Nombres</th>
+			<th>C.I.</th>
+			<th>Correo Electronico</th>
+			<th>Opciones</th>
+
+		</tr>
+	</thead>
+	<tbody>
+		{ % for persona in personas %}
+		<tr>
+			<td align="center">{{ forloop.counter}}</td>
+			<td>{{ persona.apellidos }} {{ persona.nombres }}</td>
+			<td>{{persona.ci}}</td>
+			<td>{{ persona.correo }}</td>
+			<td>Editar</td>
+		</tr>
+		{ % end for % }
+	</tbody>
+	
+</table>
+{{ personas }}
+</body>
+</html>
